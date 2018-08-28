@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+/*---------------------------------------------*/
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    border-top:4px solid;
+    border-color:#F92C8B; 
+    
+}
+h1, h2, h3, h4, h5, p, a{
+    font-family: 'Roboto', sans-serif;
+
+}
+p{
+    font-size: 23px;
+}
+.btn-primary{
+    background-color: #F92C8B;
+    outline:none;
+    border: 2px solid #F92C8B;
+
+}
+.btn-primary:hover{
+    background-color: #F92C8B;
+    outline:none;
+    border: 2px solid #F92C8B;
+  
+
+}
+
+
+/*
+.container{
+    width: 1200px;
+    margin: 0px auto;
+    padding:10px 0px;
+   
+    
+}*/
+.container-bg{
+    background-color: #fff;
+
+}
+   
+
+.sec{
+    padding:30px 0px;
+    margin:40px 0px;
+    
+}
+.sec h2{
+    font-size: 35px;
+    font-weight: bold;
+    padding:20px 10px;
+    text-align: center;
+    line-height: 2px;
+    position: relative;
+    
+
+}
+
+
+.sec-info{
+    border-left: 4px solid #F92C8B;
+    padding:0px 20px;
+    
+}
+/*-------------------------------------------------------------*/
+/* main header */
+.main-header{
+    background-color: rgb(253, 251, 251);
+    padding: 130px 0px 130px 0px;
+    border-bottom: 10px solid #F92C8B;
+
+}
+.main-header .container{
+    border-radius: 2px;
+    box-shadow: 0px 1px 1px #777;
+    border: 1px solid rgb(255, 255, 255);
+    border-bottom-left-radius: 50% 20%;
+    border-bottom-right-radius: 50% 20%;
+    
+ 
+
+}
+/* personal image */
+.personal-img{
+    width:100px;
+    height: 100px;
+    background-image: url("../imgs/me3.jpg");
+    background-size: cover;
+    -webkit-clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, 20px);
+    transition: .3s ease-in-out;
+}
+.personal-img::before{
+    content: '';
+    width:110px;
+    height: 110px;
+ 
+
+}
+.personal-img:hover{
+    background-image: url("../imgs/me.jpg");
+}
+
+
+/* main website title */
+.main-brand{
+    text-align: center; 
+    padding: 30px 0px;
+    margin:0;
+    margin-bottom: 20px; 
+
+}
+.main-brand h1{
+   font-family: 'Lobster', cursive; 
+   font-size:5vw;
+    border-bottom:2px dashed #F92C8B;
+    display: inline-block;
+    padding-bottom: 20px;
+}
+.main-brand .mytitle{
+    padding:15px 0;
+    position: relative;
+    transform: translateX(-10vw);
+
+}
+.main-brand span{
+    color: #F92C8B;
+
+}
+.main-brand .dot{
+    position: relative;
+    left:-1vw;
+   
+}
+@media all and (max-width:1200px){
+    .main-brand .dot{
+        position: relative;
+        left:-1vw;
+       
+    }
+}
+.main-brand .myJobs{
+    position: absolute;
+    opacity: 0;
+    color: #F92C8B;
+    padding-left: 10px;
+	-webkit-transform-origin: 10% 75%;
+	transform-origin: 10% 75%;
+	-webkit-animation: rotateWord 10s linear infinite 0s;
+	-ms-animation: rotateWord 10s linear infinite 0s;
+	animation: rotateWord 10s linear infinite 0s;
+}
+.main-brand .myJobs:nth-child(2) { 
+    -webkit-animation-delay: 3s; 
+	-ms-animation-delay: 3s; 
+	animation-delay: 3s; 
+	color:#F92C8B ;
+}
+.main-brand .myJobs:nth-child(3) { 
+    -webkit-animation-delay: 6s; 
+	-ms-animation-delay: 6s; 
+	animation-delay: 6s; 
+	color: #F92C8B;	
+}
+
+@keyframes rotateWord {
+    0% { opacity: 0; }
+    5% { opacity: 1; }
+    17% { opacity: 1; -webkit-transform: rotate(0deg); }
+	19% { opacity: 1; -webkit-transform: rotate(98deg); }
+	21% { opacity: 1; -webkit-transform: rotate(86deg); }
+	23% { opacity: 1; -webkit-transform: translateY(85px) rotate(83deg); }
+	25% { opacity: 0; -webkit-transform: translateY(170px) rotate(80deg); }
+	80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+
+
+
+/* media queries */
+@media screen and (max-width:1200px){
+    .main-brand h1{
+       
+        font-size:6vw; 
+         border-bottom:2px dashed #F92C8B;
+     }
+     .container{
+        width: 550px;
+       
+        
+    }
+
+
+}
+@media screen and (max-width:570px){
+    .main-brand h1{
+       
+        font-size:6vw;
+         border-bottom:2px dashed #F92C8B;
+     }
+     .container{
+        width: 350px;
+        
+    }
+ }
+/*------------------------------------------*/
+/* Main navbar*/
+#mainnav{
+    display:none;
+    
+}
+.main-nav{
+    position:fixed;
+    top:0px;
+    left:0;
+    bottom:0;
+    right:0;
+    z-index: 1;
+    background-color: rgba(0,0,0, 0.9);
+    padding:0px;
+    border-radius: 2px;
+    border:4px solid #F92C8B;
+    overflow: hidden;
+    border-bottom: 1px solid #F92C8B;
+    width:100%;
+    transition:all 5s ease-in-out;
+}
+/* inline navbar when position bottom do not equal 0 */
+/*
+.main-nav ul{
+    list-style-type: none;
+   margin:0;
+ 
+}
+.main-nav ul li{
+    display: inline-block;
+    padding:0px;
+    margin: 0;
+}
+.main-nav ul a{
+    text-decoration: none;
+    display: block;
+    font-size:20px;
+    padding: 30px 10px;
+}
+.main-nav ul a:hover{
+    background-color:#F92C8B;
+}
+*/
+.main-nav ul{
+  opacity:1 !important;
+   list-style-type: none;
+   margin:60px auto;
+   text-align: center;
+   padding: 0;
+ 
+}
+.main-nav ul li{
+    
+    padding:0px;
+    margin: 0;
+}
+.main-nav ul a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    display: inline-block;
+    font-size:27px;
+    padding: 30px 0px;
+    color:#fff;
+}
+.main-nav ul a:hover{
+    color:#F92C8B;
+    transition:color .5s ease-in-out;
+}
+/* Toggle menu btn */
+.menu-btn{
+    position: fixed;
+    z-index:2;
+    top:20px;
+    right:20px;
+    color: #F92C8B;
+    cursor: pointer;
+    font-size: 30px;
+
+}
+.menu-btn:hover{
+   
+    transition:color .5s ease-in-out;
+}
+.toggel-hover{
+    color:#fff;
+}
+/*================================================================*/
+/*social media contact*/
+.contact{
+    text-align: center;
+    padding-bottom: 20px;
+
+}
+.contact ul{
+    list-style-type: none;
+    margin:0;
+    padding: 0;
+}
+.contact ul li{
+        display: inline-block;
+        padding:0px;
+        margin: 0;
+    
+}
+.contact ul li a{
+    text-decoration: none;
+    display: block;
+    font-size:30px;
+    padding: 10px;
+    color:rgb(37, 36, 36);
+    transition: .3s ease-in;
+}
+.contact ul li a:hover{
+    color:#F92C8B;
+
+}
+.download__Btn{
+    transition: .4s ease-in;
+
+}
+.download__Btn:hover{
+    background-color: rgb(19, 18, 18);
+    border: 2px solid rgb(19, 18, 18); 
+    color:rgb(255, 255, 255);
+
+}
+
+/*---------------------------------------------*/
+
+  /* Skills
+  ---------------------------------------------*/
+  .sec-bg-foshia{
+      background-color: rgba(249, 44, 140);
+  }
+  .portfolio{
+    border: 1px solid rgb(255, 255, 255);
+    border-top-left-radius: 50% 20%;
+    border-top-right-radius: 50% 20%;
+    background-color: rgb(17, 16, 16);
+    color:#fff;
+
+  }
